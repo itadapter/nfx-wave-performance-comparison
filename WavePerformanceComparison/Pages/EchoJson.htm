@@ -1,0 +1,17 @@
+﻿#<laconf>
+    compiler
+    {
+    base-class-name="WavePerformanceComparison.Pages.Master"
+    namespace="WavePerformanceComparison.Pages"
+    summary="JSON echo test page"
+    }
+#</laconf>
+
+    
+#[override renderBody()]
+    <h2>Fill data and submit the form to run the JSON echo test:</h2>
+    <form id="frm" action="/mvc/test/echojson" method="post">
+        First name: <input type="text" name="firstname"><br>
+        Last name:  <input type="text" name="lastname">
+        <input type="submit" value="Submit">
+    </form>

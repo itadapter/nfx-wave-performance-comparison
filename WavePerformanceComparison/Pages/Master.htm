@@ -1,0 +1,174 @@
+﻿#<laconf>
+    compiler
+    {
+    using{ns="NFX.Wave.Templatization"}
+    base-class-name="NFX.Wave.Templatization.WaveTemplate"
+    namespace="WavePerformanceComparison.Pages"
+    abstract="true"
+    summary="Master page for all pages on this site"
+    }
+#</laconf>
+#[class]
+    public virtual string Title { get {return "NFX.WAVE Framework Performance Test"; } }
+
+    public const string CONTENT_WIDTH = "90%";
+
+    protected virtual void renderHeader() {defaultHeader();}
+    protected abstract void renderBody();
+    protected virtual void renderFooter() { defaultFooter(); }
+#[render]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>?[Title]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <style>
+        body {
+            font-family: Verdana, Sans-Serif;
+            font-size: 9pt;
+            width: auto;
+            padding: 0px;
+            border: none;
+            background-color: white;
+            margin: 0px;
+            color: #7a7a7a;
+            min-width: 500px;
+        }
+
+        h1 {
+            font-size: 150%;
+            color: White;
+            text-shadow: Black 1px 1px 4px;
+            display: inline;
+            margin-left: 110px;
+        }
+
+        h2 {
+            font-size: 120%;
+            text-shadow: Silver 1px 1px 3px;
+        }
+
+        h3 {
+            font-size: 100%;
+            margin-bottom: -8px;
+        }
+
+        hr {
+            border: none;
+            width: 100%;
+            background-color: #b8b8b8;
+            height: 1px;
+        }
+
+        a {
+            outline: none;
+        }
+
+        td {
+            padding: 4px;
+        }
+
+        :link {
+            font-size: 9pt;
+            color: #3560a4;
+            text-shadow: Silver -1px -1px 1px;
+            text-decoration: none;
+        }
+
+            :link:hover {
+                position: relative;
+                left: 0px;
+                top: -1px;
+                text-shadow: Yellow 1px 1px 16px;
+                color: #3560a4;
+            }
+
+        :visited {
+            font-size: 9pt;
+            text-decoration: none;
+            color: #9a2497;
+        }
+
+        #divTopPanel {
+            background-color: #f8433c;
+            height: auto;
+        }
+
+        #divHeader {
+            width: ?[CONTENT_WIDTH];
+            height: auto;
+            background-color: #fba9a6;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8pt;
+        }
+
+        #divContentPanel {
+            background-color: #f0f0f0;
+            height: auto;
+        }
+
+        #divContent {
+            width: ?[CONTENT_WIDTH];
+            height: auto;
+            background-color: #f8f6e4;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8pt;
+        }
+
+        #divBottomPanel {
+            background-color: #f8433c;
+            height: auto;
+        }
+
+        #divBottomContent {
+            width: ?[CONTENT_WIDTH];
+            height: auto;
+            background-color: #fba9a6;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8pt;
+        }
+
+        .orangeStripe {
+            width: 100%;
+            height: 4px;
+            background-color: #f3a832;
+        }
+
+        .tail {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="divTopPanel">
+        <div id="divHeader">@[renderHeader();]</div>
+    </div>
+
+    <div id="divContentPanel">
+        <div id="divContent">@[renderBody();]</div>
+    </div>
+
+    <div id="divBottomPanel">
+        <div id="divBottomContent">
+            @[renderFooter();]
+        </div>
+    </div>
+    <div class="orangeStripe" />
+    <br />
+    <div class="tail">
+    </div>
+</body>
+</html>
+
+#[defaultFooter()]
+<a href="index.htm">Index</a> &nbsp; | &nbsp; Page rendered at ?[DateTime.Now]
+
+#[defaultHeader()]
+<h1>A set of simple performance tests for NFX.Wave webserver</h1>*

@@ -1,0 +1,43 @@
+﻿nfx
+{
+  wave
+  {
+    server
+    {
+        prefix{ name="http://+:8081/" }
+
+		dispatcher 
+		{
+			filter
+			{
+				name="Errors" order=0 type="NFX.Wave.Filters.ErrorFilter, NFX.Wave"
+				show-dump
+				{
+				match{name="localhost" order=1 is-local=true }
+				}
+			}
+
+            handler
+            {
+                name="Mvc Dispatching"
+                order=1
+                type="NFX.Wave.Handlers.MVCHandler, NFX.Wave"
+                                
+                type-location { name="local" assembly="WavePerformanceComparison.exe" ns{ name="WavePerformanceComparison.Controllers"} }                                
+                                
+                match{ path="mvc/{type}/{mvc-action}" var{query-name="*"} }
+            }
+			
+			handler
+			{
+				name="Pages"
+				order=3
+				type="NFX.Wave.Handlers.TemplateHandler, NFX.Wave"
+				not-found-redirect-url="/pages/index"
+				match{ path="pages/{*type}"}
+				type-location { name="local" assembly="WavePerformanceComparison.exe" ns{ name="WavePerformanceComparison.Pages"} }
+			}
+		}
+    }  
+  }
+}

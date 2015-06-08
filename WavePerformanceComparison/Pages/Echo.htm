@@ -1,0 +1,18 @@
+﻿#<laconf>
+    compiler
+    {
+    base-class-name="WavePerformanceComparison.Pages.Master"
+    namespace="WavePerformanceComparison.Pages"
+    summary="Echo test page"
+    }
+#</laconf>
+
+    
+#[override renderBody()]
+    <h2>Enter a string to run the echo test:</h2>
+    <form id="frm" action="/mvc/test/echo" method="post">
+        Any string: <input type="text" name="data"> 
+        &nbsp;
+        <input type="submit" value="Submit">
+    </form>
+
