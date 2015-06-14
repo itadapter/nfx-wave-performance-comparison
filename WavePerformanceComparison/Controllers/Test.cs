@@ -13,6 +13,7 @@ namespace WavePerformanceComparison.Controllers
 {
     public class Test : Controller
     {
+
         [Action]
         public object EchoJson(JSONDataMap data)
         {    
@@ -34,7 +35,37 @@ namespace WavePerformanceComparison.Controllers
         [Action]
         public object RandomPerson()
         {
-            return Persons.ARandomOne();
+            return new 
+            {
+                ServerDateTime = DateTime.Now,
+                person = Persons.ARandomOne()
+            };
+        }
+
+        [Action]
+        public object RandomPayload(int length)
+        {
+            return
+                WavePerformanceComparison.Data.RandomPayload.generate(length);
+           
+        }
+
+        [Action]
+        public object RandomPayload100()
+        {
+            return WavePerformanceComparison.Data.RandomPayload.generate(100);
+        }
+
+        [Action]
+        public object RandomPayload1000()
+        {
+            return WavePerformanceComparison.Data.RandomPayload.generate(1000);
+        }
+
+        [Action]
+        public object RandomPayload10000()
+        {
+            return WavePerformanceComparison.Data.RandomPayload.generate(10000);
         }
     }
 }

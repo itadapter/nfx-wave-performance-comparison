@@ -54,6 +54,17 @@
     <Compile Include="Data\MaritalStatus.cs" />
     <Compile Include="Data\Person.cs" />
     <Compile Include="Data\Persons.cs" />
+    <Compile Include="Data\RandomPayload.cs" />
+    <Compile Include="Pages\Echo.htm.auto.cs" />
+    <Compile Include="Pages\EchoJson.htm.auto.cs" />
+    <Compile Include="Pages\index.htm.auto.cs" />
+    <Compile Include="Pages\Master.htm.auto.cs" />
+    <Compile Include="Pages\RandomPayload10.htm.auto.cs" />
+    <Compile Include="Pages\RandomPayload100.htm.auto.cs" />
+    <Compile Include="Pages\RandomPayload1000.htm.auto.cs" />
+    <Compile Include="Pages\RandomPayload10000.htm.auto.cs" />
+    <Compile Include="Pages\RandomPerson.htm.auto.cs" />
+    <Compile Include="Pages\RandomPersonSimple.htm.auto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -64,25 +75,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="Pages\Echo.htm.auto.ch" />
-    <Compile Include="Pages\EchoJson.htm.auto.ch" />
-    <Compile Include="Pages\RandomPerson.htm.auto.ch" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Index.htm.auto.ch" />
-    <Compile Include="Pages\Master.htm.auto.ch" />
     <None Include="WavePerformanceComparison.laconf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\Occupations.txt" />
-    <Content Include="Data\Femalenames.txt" />
-    <Content Include="Data\Lastnames.txt" />
-    <Content Include="Data\Malenames.txt" />
-    <Content Include="Data\Universities.txt" />
+    <EmbeddedResource Include="Data\Femalenames.txt" />
+    <EmbeddedResource Include="Data\Lastnames.txt" />
+    <EmbeddedResource Include="Data\Malenames.txt" />
+    <EmbeddedResource Include="Data\Universities.txt" />
     <Content Include="Pages\Master.htm" />
     <Content Include="Pages\Index.htm" />
+    <Content Include="Pages\RandomPayload10.htm" />
+    <Content Include="Pages\RandomPayload100.htm" />
+    <Content Include="Pages\RandomPayload10000.htm" />
+    <Content Include="Pages\RandomPayload1000.htm" />
+    <Content Include="Pages\RandomPersonSimple.htm" />
     <Content Include="Pages\RandomPerson.htm" />
     <Content Include="Pages\EchoJson.htm" />
     <Content Include="Pages\Echo.htm" />
@@ -93,7 +104,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>C:\Projects\nfx-master\Output\Debug\ntc.exe "$(ProjectDir)\Pages\*.htm" -r -ext ".auto.ch" /src</PreBuildEvent>
+    <PreBuildEvent>C:\Projects\nfx-master\Output\Debug\ntc.exe "$(ProjectDir)\Pages\*.htm" -r -ext ".auto.cs" /src</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

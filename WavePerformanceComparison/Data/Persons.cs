@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.IO;
 
+using NFX;
+
 namespace WavePerformanceComparison.Data
 {
     public static class Persons
@@ -43,16 +45,16 @@ namespace WavePerformanceComparison.Data
 
         static Persons()
         {
-            LastNames = readResource(WavePerformanceComparison.Properties.Resources.Lastnames);
-            MaleNames = readResource(WavePerformanceComparison.Properties.Resources.Malenames);
-            FemaleNames = readResource(WavePerformanceComparison.Properties.Resources.Femalenames);
-            Occupations = readResource(WavePerformanceComparison.Properties.Resources.Occupations);
-            Universities = readResource(WavePerformanceComparison.Properties.Resources.Universities);
+            LastNames = readResource("Lastnames.txt");
+            MaleNames = readResource("Malenames.txt");
+            FemaleNames = readResource("Femalenames.txt");
+            Occupations = readResource("Occupations.txt");
+            Universities = readResource("Universities.txt");
         }
 
-        static string[] readResource(string resourse)
+        static string[] readResource(string resourseName)
         {
-            return resourse.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            return typeof(Person).GetText(resourseName).Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 

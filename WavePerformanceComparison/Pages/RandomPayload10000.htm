@@ -1,0 +1,11 @@
+﻿#<laconf>
+    compiler
+    {
+     base-class-name="NFX.Wave.Templatization.WaveTemplate"
+    namespace="WavePerformanceComparison.Pages"
+    summary="Template engine test page"
+    }
+#</laconf>
+
+#[render]
+ ?[WavePerformanceComparison.Data.RandomPayload.generate(10000)]
