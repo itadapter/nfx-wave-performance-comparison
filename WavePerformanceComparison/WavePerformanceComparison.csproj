@@ -59,10 +59,7 @@
     <Compile Include="Pages\EchoJson.htm.auto.cs" />
     <Compile Include="Pages\index.htm.auto.cs" />
     <Compile Include="Pages\Master.htm.auto.cs" />
-    <Compile Include="Pages\RandomPayload10.htm.auto.cs" />
-    <Compile Include="Pages\RandomPayload100.htm.auto.cs" />
-    <Compile Include="Pages\RandomPayload1000.htm.auto.cs" />
-    <Compile Include="Pages\RandomPayload10000.htm.auto.cs" />
+    <Compile Include="Pages\RandomPayload.htm.auto.cs" />
     <Compile Include="Pages\RandomPerson.htm.auto.cs" />
     <Compile Include="Pages\RandomPersonSimple.htm.auto.cs" />
     <Compile Include="Program.cs" />
@@ -89,10 +86,7 @@
     <EmbeddedResource Include="Data\Universities.txt" />
     <Content Include="Pages\Master.htm" />
     <Content Include="Pages\Index.htm" />
-    <Content Include="Pages\RandomPayload10.htm" />
-    <Content Include="Pages\RandomPayload100.htm" />
-    <Content Include="Pages\RandomPayload10000.htm" />
-    <Content Include="Pages\RandomPayload1000.htm" />
+    <Content Include="Pages\RandomPayload.htm" />
     <Content Include="Pages\RandomPersonSimple.htm" />
     <Content Include="Pages\RandomPerson.htm" />
     <Content Include="Pages\EchoJson.htm" />

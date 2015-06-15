@@ -34,7 +34,7 @@
 				order=3
 				type="NFX.Wave.Handlers.TemplateHandler, NFX.Wave"
 				not-found-redirect-url="/pages/index"
-				match{ path="pages/{*type}"}
+				match{ path="pages/{type}" var{query-name="*"}}
 				type-location { name="local" assembly="WavePerformanceComparison.exe" ns{ name="WavePerformanceComparison.Pages"} }
 			}
 		}
