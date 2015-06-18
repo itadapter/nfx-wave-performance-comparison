@@ -13,7 +13,10 @@ namespace WavePerformanceComparison.Controllers
 {
     public class Test : Controller
     {
-
+        
+        /// <summary>
+        /// Echoes an JSON data packed into the new JSON message
+        /// </summary>
         [Action]
         public object EchoJson(JSONDataMap data)
         {    
@@ -25,6 +28,9 @@ namespace WavePerformanceComparison.Controllers
             };
         }
         
+        /// <summary>
+        /// Simple string echo - receives a plain text data and returns it to the caller with dynamic content added
+        /// </summary>
         [Action]
         public object Echo(String data)
         {
@@ -32,6 +38,9 @@ namespace WavePerformanceComparison.Controllers
             
         }
 
+        /// <summary>
+        /// Returns a Dictionary (to be encoded as JSON to send it to the caller) with a random Person object
+        /// </summary>
         [Action]
         public object RandomPerson()
         {
@@ -42,30 +51,15 @@ namespace WavePerformanceComparison.Controllers
             };
         }
 
+        /// <summary>
+        /// Returns a random string of specified length
+        /// </summary>
         [Action]
         public object RandomPayload(int length)
         {
             return
                 WavePerformanceComparison.Data.RandomPayload.generate(length);
            
-        }
-
-        [Action]
-        public object RandomPayload100()
-        {
-            return WavePerformanceComparison.Data.RandomPayload.generate(100);
-        }
-
-        [Action]
-        public object RandomPayload1000()
-        {
-            return WavePerformanceComparison.Data.RandomPayload.generate(1000);
-        }
-
-        [Action]
-        public object RandomPayload10000()
-        {
-            return WavePerformanceComparison.Data.RandomPayload.generate(10000);
         }
     }
 }

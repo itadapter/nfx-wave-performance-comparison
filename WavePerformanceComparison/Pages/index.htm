@@ -9,8 +9,16 @@
 
 #[override renderBody()]
 <table>
-    <tr><td> <a href="Echo.htm">Echo page</a> </td></tr>
+    <tr><td><a href="Echo.htm">Echo page</a> </td></tr>
     <tr><td><a href="EchoJson.htm">JSON echo page</a></td></tr>
     <tr><td><a href="RandomPerson.htm">Template engine test page</a></td></tr>
-</table>
+    <tr><td><a href="RandomPersonSimple.htm">Template engine test - a minimalistic lightweight page</a></td></tr>
+   
+    <tr><td><h3>Other URLs to run tests:</h3><br /></td></tr>
+    
+    <tr><td><a href="/mvc/test/RandomPerson">&lt;site root&gt;/mvc/test/RandomPerson</a> - returns a JSON representation of randomly generated Person object</td></tr>
+    <tr><td><a href="/mvc/test/RandomPayload?length=1000">&lt;site root&gt;/mvc/test/RandomPayload?length=&lt;integer number&gt;</a> - returns a random string of specified length</td></tr>
+    <tr><td><a href="/mvc/test/Echo?data=abcdefg">&lt;site root&gt;/mvc/test/Echo?data=&lt;any string&gt;</a> - returns a simple string echo of string that was sent as the parameter</td></tr>
+    <tr><td><a href="RandomPayload.htm?length=1000">&lt;site root&gt;/pages/RandomPayload.htm?length=&lt;integer number&gt;</a> - returns a random string of specified length through template engine without invoking MVC</td></tr>
+ </table>
 
