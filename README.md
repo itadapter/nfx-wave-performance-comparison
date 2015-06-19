@@ -15,3 +15,5 @@ URLs for tests:
 * &lt;site root&gt;/pages/RandomPerson   - returns a page with CSS styles and formatting with a representation of randomly generated Person object
 * &lt;site root&gt;/pages/RandomPersonSimple   - returns a very minimalistic page with a representation of randomly generated Person object
 * &lt;site root&gt;/pages/RandomPayload?length=&lt;integer number&gt; - returns a random string of specified length through template engine without invoking MVC
+
+There is a <a href="https://github.com/nik-z/asp-net-performance-comparison">counterpart ASP.NET application</a> to make performance comparison possible between ASP.NET and NFX.Wave.
