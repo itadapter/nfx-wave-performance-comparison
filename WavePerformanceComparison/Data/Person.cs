@@ -14,8 +14,6 @@ namespace WavePerformanceComparison.Data
         public int Age { get; set; }
         public int Weight { get; set; }
         public int Height { get; set; }
-        public string Grade;
-        public string School;
         public string Occupation { get; set; }
         public string Education { get; set; }
         public string Degree { get; set; }
