@@ -9,27 +9,32 @@
 
 
 #[render]
-<h2>Current time is ?[DateTime.Now]</h2>
-<h1>And the winner of "The Random Person of The Moment" nomination is...</h1>*
+<html>
+    <body>
+        <p>Current time is ?[DateTime.Now]</p>
+        <h1>And the winner of "The Random Person of The Moment" nomination is...*</h1>
 
-    @[WavePerformanceComparison.Data.Person p = WavePerformanceComparison.Data.Persons.ARandomOne();]
+        @[WavePerformanceComparison.Data.Person p = WavePerformanceComparison.Data.Persons.ARandomOne();]
 
-    <div id="divContent">
-        <table>
-            <tr><td>First name: </td><td>?[p.FirstName]</td></tr>
-            <tr><td>Last name: </td><td>?[p.LastName]</td></tr>
-            <tr><td></td><td></td></tr>
-            <tr><td>Gender: </td><td>?[p.Gender]</td></tr>
-            <tr><td>Marital status: </td><td>?[p.MaritalStatus]</td></tr>
-            <tr><td></td><td></td></tr>
-            <tr><td>Age: </td><td>?[p.Age]</td></tr>
-            <tr><td>Weight (kg): </td><td>?[p.Weight]</td></tr>
-            <tr><td>Height (cm): </td><td>?[p.Height]</td></tr>
-            <tr><td></td><td></td></tr>
-            <tr><td>Education: </td><td>?[p.Education]</td></tr>
-            <tr><td>Degree: </td><td>?[p.Degree]</td></tr>
-            <tr><td>Occupation: </td><td>?[p.Occupation]</td></tr>
-        </table>
-     </div>
+        <div id="divContent">
+            <table>
+                <tr><td>First name: </td><td>?[p.FirstName]</td></tr>
+                <tr><td>Last name: </td><td>?[p.LastName]</td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td>Gender: </td><td>?[p.Gender]</td></tr>
+                <tr><td>Marital status: </td><td>?[p.MaritalStatus]</td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td>Age: </td><td>?[p.Age]</td></tr>
+                <tr><td>Weight (kg): </td><td>?[p.Weight]</td></tr>
+                <tr><td>Height (cm): </td><td>?[p.Height]</td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td>Education: </td><td>?[p.Education]</td></tr>
+                <tr><td>Degree: </td><td>?[p.Degree]</td></tr>
+                <tr><td>Occupation: </td><td>?[p.Occupation]</td></tr>
+            </table>
+        </div>
 
-     * This is a work of fiction. Any resemblance to actual events or locales or persons is entirely coincidental. <br />
+        * This is a work of fiction. Any resemblance to actual events or locales or persons is entirely coincidental.
+        <br />
+    </body>
+</html>

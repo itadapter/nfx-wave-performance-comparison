@@ -10,12 +10,10 @@
 #[class]
     public override string Title { get {return "NFX.Wave template engine test"; } }
 
-#[override renderHeader()]
-        <h2>Current time is ?[DateTime.Now]</h2><br />
-        <h1>And the winner of "The Random Person of The Moment" nomination is...</h1>*
-
 
 #[override renderBody()]
+<h3>Current time is ?[DateTime.Now]</h3>
+<h2>And the winner of "The Random Person of The Moment" nomination is...*</h2>
     @[WavePerformanceComparison.Data.Person p = WavePerformanceComparison.Data.Persons.ARandomOne();]
 
     <div id="divContent">

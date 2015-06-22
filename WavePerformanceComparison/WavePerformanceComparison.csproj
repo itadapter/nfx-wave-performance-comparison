@@ -55,6 +55,13 @@
     <Compile Include="Data\Person.cs" />
     <Compile Include="Data\Persons.cs" />
     <Compile Include="Data\RandomPayload.cs" />
+    <Compile Include="Pages\Echo.htm.auto.cs" />
+    <Compile Include="Pages\EchoJson.htm.auto.cs" />
+    <Compile Include="Pages\Index.htm.auto.cs" />
+    <Compile Include="Pages\Master.htm.auto.cs" />
+    <Compile Include="Pages\RandomPayload.htm.auto.cs" />
+    <Compile Include="Pages\RandomPerson.htm.auto.cs" />
+    <Compile Include="Pages\RandomPersonSimple.htm.auto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
